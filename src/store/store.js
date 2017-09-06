@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 // Tell Vue to use Vuex
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const Store = new Vuex.Store({
     state: {
         todos: [],
         newTodo: '',
@@ -12,7 +12,6 @@ export default new Vuex.Store({
     },
     mutations: {
         ADD_TODO(state) {
-            console.log('adding note mutation');
             state.todos.push({
                 body: state.newTodo,
                 completed: false
@@ -29,3 +28,5 @@ export default new Vuex.Store({
         todos: state => state.todos.filter((todo) => {return !todo.completed})
     }
 });
+
+export default Store;

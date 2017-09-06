@@ -8,7 +8,7 @@
     const Toolbar = {
         methods: {
             addTodo() {
-                store.dispatch('addTodo');
+                this.$store.dispatch('addTodo');
             }
         }
     };
